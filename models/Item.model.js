@@ -1,3 +1,4 @@
+//Hard-coded data
 const reviews = [
   {
     id: 4507,
@@ -24,6 +25,7 @@ const reviews = [
     createdDate: "2017-12-08 02:55:27"
   }
 ];
+
 const items = [
   {
     id: 1,
