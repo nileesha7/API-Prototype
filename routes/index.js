@@ -2,10 +2,14 @@ const express = require("express");
 var router = express.Router();
 
 const items = require("../models/Item.model");
+const db = require("../queries");
 
 router.get("/", (req, res) => {
   res.send("Welcome to the prototype API!");
 });
+
+router.get("/api/users", db.getUsers);
+router.get("/api/users/:id", db.getUserById);
 
 //api call for rating Average
 router.get("/api/ratingaverage/json", (req, res) => {
