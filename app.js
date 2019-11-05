@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const routes = require("./routes/index");
 const app = express();
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
 
 /*CORS - Cross Origin Resource Sharing
   allows restricted resources on a web page to be requested from another 

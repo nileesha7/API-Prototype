@@ -9,7 +9,14 @@ router.get("/", (req, res) => {
 });
 
 router.get("/api/users", db.getUsers);
+
 router.get("/api/users/:id", db.getUserById);
+
+router.post("/api/users", db.createUser);
+
+router.put("/api/users/:id", db.editUser);
+
+router.delete("/api/users/:id", db.deleteUser);
 
 //api call for rating Average
 router.get("/api/ratingaverage/json", (req, res) => {
